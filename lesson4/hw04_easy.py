@@ -6,13 +6,26 @@
 # квадратами элементов исходного списка
 # [1, 2, 4, 0] --> [1, 4, 16, 0]
 
+list1 = [13, 23, 22, 45, 56]
+list2 = [x ** 2 for x in list1]
+print(list2)
+
 # Задание-2:
 # Даны два списка фруктов.
 # Получить список фруктов, присутствующих в обоих исходных списках.
 
+fruit_list1 = ['apple', 'lime', 'lemon', 'banana']
+fruit_list2 = ['apple', 'banana']
+
+fruit_list_nouniq = list(set([x for x in (fruit_list1 + fruit_list2) if (fruit_list1 + fruit_list2).count(x) > 1]))
+print(fruit_list_nouniq)
 # Задание-3:
 # Дан список, заполненный произвольными числами.
 # Получить список из элементов исходного, удовлетворяющих следующим условиям:
 # + Элемент кратен 3
 # + Элемент положительный
 # + Элемент не кратен 4
+
+list_start = [13, 23, 22, 45, 56, 60, -45, 66]
+list_end = [x for x in list_start if x > 0 and x % 3 == 0 and x % 4 != 0]
+print(list_end)
